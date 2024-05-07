@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>website</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .product-small-img img {
+        max-width: 80px;
+        height: 92px;
+        margin: 10px 0;
+        cursor: pointer;
+        display: block;
+        object-fit: cover;
+        opacity: 0.6;
+      }
+
+      .product {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+      }
+      .img-container img {
+        height: 500px;
+        width: 400px;
+        object-fit: cover;
+      }
+
+      .product-small-img {
+        float: left;
+      }
+      .img-container {
+        float: right;
+        padding: 10px;
+      }
+
+      .product-small-img img:hover {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="product">
+      <div class="product-small-img">
+        <img
+          class="simg"
+          src="https://external-preview.redd.it/NgrpW61hzw0rf15eBMQzWExphUVklbeVotU2FKdgSEQ.jpg?auto=webp&s=e3ce6d311108261756db0fb2d4e2e43fca4430f9"
+          alt="joe on his bbd"
+        />
+
+        <img
+          class="simg"
+          src="https://64.media.tumblr.com/cc95073a7ae6b73899e2b9cc09899a9d/ceefad339607cc32-97/s540x810/942b957a3af052b3c13d804455654f561626e10e.jpg"
+          alt="joe with a silly hat"
+        />
+
+        <img
+          class="simg"
+          src="https://ocdn.eu/pulscms-transforms/1/ntoktkqTURBXy83ZTIzZTM5NDBjMTRhNGRmYmE2YmE4NDRiYWE5MjBjMS5qcGVnkpUDAC_NCLLNBOSTBc0EsM0DWQ"
+          alt="joe as a cowboy"
+        />
+
+        <img
+          class="simg"
+          src="https://64.media.tumblr.com/cb565fb78dca78ed5783fe31b9ebc1e1/d1054cf398d7bd8a-74/s540x810/8669afbb637c08cf2c742e9a56ae86510f27afa6.jpg"
+          alt="joe at a football match"
+        />
+
+        <img
+          class="simg"
+          src="https://iheartcats.com/wp-content/uploads/2021/09/realgrumpycat-97584755_235712740993019_5824853894403109907_n-e1631234900416.jpg"
+          alt="jow at flowers garden"
+        />
+      </div>
+      <div class="img-container">
+        <img
+          src="https://64.media.tumblr.com/cc95073a7ae6b73899e2b9cc09899a9d/ceefad339607cc32-97/s540x810/942b957a3af052b3c13d804455654f561626e10e.jpg"
+          id="imageBox"
+          alt="joe with a silly hat"
+        />
+      </div>
+    </div>
+
+    <script>
+      const gallaryImg = document.querySelectorAll(".product-small-img img");
+
+      for (let smallImage of gallaryImg) {
+        smallImage.addEventListener("click", () => {
+          const fullImage = document.getElementById("imageBox");
+          fullImage.src = smallImage.src;
+        });
+      }
+    </script>
+  </body>
+</html>
